@@ -1,0 +1,38 @@
+[ 2026-02-07 18:37:27,740 ] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+[ 2026-02-07 18:37:29,297 ] 1025 httpx - INFO - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+[ 2026-02-07 18:37:30,918 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-02-07 18:37:30,928 ] 107 dagshub - INFO - Accessing as saksham-s18
+[ 2026-02-07 18:37:32,598 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/saksham-s18/Network-Security-MlOps "HTTP/1.1 200 OK"
+[ 2026-02-07 18:37:34,085 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2026-02-07 18:37:34,089 ] 107 dagshub - INFO - Initialized MLflow to track repo "saksham-s18/Network-Security-MlOps"
+[ 2026-02-07 18:37:34,090 ] 107 dagshub - INFO - Repository saksham-s18/Network-Security-MlOps initialized!
+[ 2026-02-07 18:37:34,091 ] 15 root - INFO - Starting Data Ingestion
+[ 2026-02-07 18:37:43,109 ] 64 root - INFO - Performed train test split
+[ 2026-02-07 18:37:43,110 ] 65 root - INFO - Train set length:17688
+[ 2026-02-07 18:37:43,110 ] 66 root - INFO - Test set length:4422
+[ 2026-02-07 18:37:43,110 ] 67 root - INFO - Exited split_data_as_train_test method of Data Ingestion class
+[ 2026-02-07 18:37:43,242 ] 74 root - INFO - Exported train and test file at Artifacts\02_07_2026_18_35_26\data_ingestion\ingested\train.csv and Artifacts\02_07_2026_18_35_26\data_ingestion\ingested\test.csv
+[ 2026-02-07 18:37:43,243 ] 17 root - INFO - Data Ingestion Completed
+[ 2026-02-07 18:37:43,306 ] 22 root - INFO - Starting Data Validation
+[ 2026-02-07 18:37:43,306 ] 108 root - INFO - Starting data validation
+[ 2026-02-07 18:37:43,623 ] 38 root - INFO - Schema columns count: 31
+[ 2026-02-07 18:37:43,623 ] 39 root - INFO - Dataframe columns count: 31
+[ 2026-02-07 18:37:43,623 ] 38 root - INFO - Schema columns count: 31
+[ 2026-02-07 18:37:43,623 ] 39 root - INFO - Dataframe columns count: 31
+[ 2026-02-07 18:37:43,627 ] 66 root - INFO - Numerical columns in schema: ['having_ip_address', 'url_length', 'shortining_service', 'having_at_symbol', 'double_slash_redirecting', 'prefix_suffix', 'having_sub_domain', 'sslfinal_state', 'domain_registeration_length', 'favicon', 'port', 'https_token', 'request_url', 'url_of_anchor', 'links_in_tags', 'sfh', 'submitting_to_email', 'abnormal_url', 'redirect', 'on_mouseover', 'rightclick', 'popupwidnow', 'iframe', 'age_of_domain', 'dnsrecord', 'web_traffic', 'page_rank', 'google_index', 'links_pointing_to_page', 'statistical_report', 'result']
+[ 2026-02-07 18:37:43,627 ] 67 root - INFO - Numerical columns in dataframe: ['having_ip_address', 'url_length', 'shortining_service', 'having_at_symbol', 'double_slash_redirecting', 'prefix_suffix', 'having_sub_domain', 'sslfinal_state', 'domain_registeration_length', 'favicon', 'port', 'https_token', 'request_url', 'url_of_anchor', 'links_in_tags', 'sfh', 'submitting_to_email', 'abnormal_url', 'redirect', 'on_mouseover', 'rightclick', 'popupwidnow', 'iframe', 'age_of_domain', 'dnsrecord', 'web_traffic', 'page_rank', 'google_index', 'links_pointing_to_page', 'statistical_report', 'result']
+[ 2026-02-07 18:37:43,629 ] 66 root - INFO - Numerical columns in schema: ['having_ip_address', 'url_length', 'shortining_service', 'having_at_symbol', 'double_slash_redirecting', 'prefix_suffix', 'having_sub_domain', 'sslfinal_state', 'domain_registeration_length', 'favicon', 'port', 'https_token', 'request_url', 'url_of_anchor', 'links_in_tags', 'sfh', 'submitting_to_email', 'abnormal_url', 'redirect', 'on_mouseover', 'rightclick', 'popupwidnow', 'iframe', 'age_of_domain', 'dnsrecord', 'web_traffic', 'page_rank', 'google_index', 'links_pointing_to_page', 'statistical_report', 'result']
+[ 2026-02-07 18:37:43,629 ] 67 root - INFO - Numerical columns in dataframe: ['having_ip_address', 'url_length', 'shortining_service', 'having_at_symbol', 'double_slash_redirecting', 'prefix_suffix', 'having_sub_domain', 'sslfinal_state', 'domain_registeration_length', 'favicon', 'port', 'https_token', 'request_url', 'url_of_anchor', 'links_in_tags', 'sfh', 'submitting_to_email', 'abnormal_url', 'redirect', 'on_mouseover', 'rightclick', 'popupwidnow', 'iframe', 'age_of_domain', 'dnsrecord', 'web_traffic', 'page_rank', 'google_index', 'links_pointing_to_page', 'statistical_report', 'result']
+[ 2026-02-07 18:37:43,958 ] 24 root - INFO - Data Validation Completed
+[ 2026-02-07 18:37:43,959 ] 28 root - INFO - Starting Data Transformation
+[ 2026-02-07 18:37:43,959 ] 59 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[ 2026-02-07 18:37:43,959 ] 61 root - INFO - starting data transformation
+[ 2026-02-07 18:37:44,031 ] 46 root - INFO - Entered get_data_transformer_object method of DataTransformation class
+[ 2026-02-07 18:37:44,032 ] 52 root - INFO - Exited get_data_transformer_object method of DataTransformation class
+[ 2026-02-07 18:37:44,063 ] 64 root - INFO - Saving object file: Artifacts\02_07_2026_18_35_26\data_transformation\transformed_object\preprocessing.pkl
+[ 2026-02-07 18:37:44,071 ] 69 root - INFO - Exited save_object function of utils
+[ 2026-02-07 18:37:44,073 ] 31 root - INFO - Data Transformation Completed
+[ 2026-02-07 18:37:44,073 ] 34 root - INFO - Starting Model Trainer
+[ 2026-02-07 18:38:50,277 ] 64 root - INFO - Saving object file: Artifacts\02_07_2026_18_35_26\model_trainer\trained_model\model.pkl
+[ 2026-02-07 18:38:50,305 ] 69 root - INFO - Exited save_object function of utils
+[ 2026-02-07 18:38:50,305 ] 112 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\02_07_2026_18_35_26\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9911361804995971, precision_score=0.9865650691798676, recall_score=0.9957498482088646), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9857084524295631, precision_score=0.9789132197891321, recall_score=0.9925986842105263))

@@ -19,6 +19,8 @@ from sklearn.ensemble import (
     RandomForestClassifier,
 )
 import mlflow
+import dagshub
+dagshub.init(repo_owner='saksham-s18', repo_name='Network-Security-MlOps', mlflow=True)
 
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
@@ -51,17 +53,17 @@ class ModelTrainer:
             }
             params={
                 "Decision Tree":{
-                    # 'criterion':['gini','entropy','log_loss'],
+                    'criterion':['gini','entropy','log_loss'],
                     # 'splitter':['best','random'],
                     # 'max_features':['sqrt','log2']
                 },
                 "Random Forest":{
                     # 'criterion':['gini','entropy','log_loss'],
                     # 'max_features':['sqrt','log2',None],
-                    # 'n_estimators':[8,16,32,64,128,256]
+                    'n_estimators':[8,16,32,64,128,256]
                 },
                 "Gradient Boosting":{
-                    # 'learning_rate':[.1,.01,.05,.001],
+                    'learning_rate':[.1,.01,.05,.001],
                     # 'subsample':[0.6,0.7,0.75,0.8,0.85,0.9],
                     # 'n_estimators':[8,16,32,64,128,256],
                     # 'max_depth':[3,4,5,6,7,8],
@@ -70,7 +72,7 @@ class ModelTrainer:
                 "Logistic Regression":{},
                 "AdaBoost":{
                     # 'learning_rate':[.1,.01,.05,.001],
-                    # 'n_estimators':[8,16,32,64,128,256]
+                    'n_estimators':[8,16,32,64,128,256]
                 },
             }
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
@@ -103,6 +105,7 @@ class ModelTrainer:
             network_model=NetworkModel(preprocessor=preprocessor,model=best_model)
             save_object(self.model_trainer_config.trained_model_file_path,obj=network_model)
 
+            save_object("final_models/model.pkl",best_model)
             #Model trainer artifact
             model_trainer_artifact=ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
                                                         train_metric_artifact=classification_train_metric,
