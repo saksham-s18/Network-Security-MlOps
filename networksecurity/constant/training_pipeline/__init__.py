@@ -15,7 +15,7 @@ TEST_FILE_NAME:str="test.csv"
 
 SCHEMA_FILE_PATH=os.path.join("data_schema","schema.yaml")
 
-SAVED_MODEL_DIR=os.path.join("saved_models")
+SAVED_MODEL_DIR=os.path.join("final_models")
 MODEL_FILE_NAME="model.pkl"
 
 """
@@ -67,3 +67,4 @@ MODEL_FILE_PATH = os.path.join(
     MODEL_TRAINER_TRAINED_MODEL_DIR,
     MODEL_TRAINER_TRAINED_MODEL_NAME
 )
+TRAINING_BUCKET_NAME="networksecurity-185236887697"
