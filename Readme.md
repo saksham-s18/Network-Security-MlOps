@@ -10,7 +10,7 @@ It demonstrates how to build a **production-ready ML system** using modular comp
 Phishing attacks are one of the most common cybersecurity threats.  
 This project uses **machine learning classification models** to predict whether a website is **phishing or legitimate** based on extracted features.
 
-The entire ML lifecycle is implemented as a **pipeline**, similar to how real-world ML systems are built in industry.
+The entire ML lifecycle is implemented as a **pipeline**, similar  to how real-world ML systems are built in industry.
 
 ---
 
